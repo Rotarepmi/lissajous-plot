@@ -5,11 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Lissajous Plots</title>
+
+    <link rel="stylesheet" type="text/css" href="./bootstrap.min.css" />
 </head>
 
 <body>
-    <div class="mb-3">
+    <p class="m-5 px-5">In mathematics, a Lissajous curve, also known as Lissajous figure or Bowditch curve, is the
+        graph of a system of parametric equations, which describe complex harmonic motion. This family of curves was
+        investigated by Nathaniel Bowditch in 1815, and later in more detail by Jules Antoine Lissajous in 1857.</p>
+
+    <div class="mb-3 text-center">
         <button id="a1b2" data-a="1" data-b="2" class="btn btn-primary btn-sm">a=1, b=2</button>
         <button id="a3b2" data-a="3" data-b="2" class="btn btn-primary btn-sm">a=3, b=2</button>
         <button id="a3b4" data-a="3" data-b="4" class="btn btn-primary btn-sm">a=3, b=4</button>
@@ -30,7 +36,7 @@
             yaxis: {
                 range: [-1.1, 1.1]
             },
-            title: 'Look at those Lissajous!'
+            title: 'Click to generate Lissajous curve!'
         };
 
         function renderPlot(x, y) {
@@ -65,6 +71,8 @@
         }
 
         btns.forEach(btn => btn.addEventListener('click', generateFigure));
+
+        renderPlot();
     </script>
 </body>
 
